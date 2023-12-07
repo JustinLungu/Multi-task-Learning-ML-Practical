@@ -1,0 +1,1 @@
+This is the folder containing the UTKFace images and the corresponding .csv file with the labels.
