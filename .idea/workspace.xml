@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77400314-07a9-4c2e-97c2-77321798642a" name="Changes" comment="testing preprocessing">
-      <change afterPath="$PROJECT_DIR$/data/UTKFace_labels_for_trying.csv" afterDir="false" />
+    <list default="true" id="77400314-07a9-4c2e-97c2-77321798642a" name="Changes" comment="preprocessing works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/preprocessing.py" afterDir="false" />
     </list>
@@ -80,7 +79,7 @@
       <workItem from="1701343929607" duration="592000" />
       <workItem from="1701773765503" duration="1857000" />
       <workItem from="1701776266028" duration="4278000" />
-      <workItem from="1701955304707" duration="3469000" />
+      <workItem from="1701955304707" duration="4167000" />
     </task>
     <task id="LOCAL-00001" summary="intial commit">
       <created>1700564019966</created>
@@ -162,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701956737693</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="preprocessing works">
+      <option name="closed" value="true" />
+      <created>1701959507735</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701959507735</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +197,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="label extraction as python file" />
     <MESSAGE value="testing preprocessing" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing preprocessing" />
+    <MESSAGE value="preprocessing works" />
+    <option name="LAST_COMMIT_MESSAGE" value="preprocessing works" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Multi_task_Learning_ML_Practical$Data_Label_Extraction.coverage" NAME="Data_Label_Extraction Coverage Results" MODIFIED="1701780473555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />

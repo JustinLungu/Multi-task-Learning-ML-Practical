@@ -64,9 +64,7 @@ def split_data(data, test_size=0.1, random_state=42):
 
 # Function to create ImageDataGenerator with specified augmentations
 def create_data_generator():
-    return (ImageDataGenerator(
-        rescale=1. / 255,),
-            ImageDataGenerator(
+    return ImageDataGenerator(
         rescale=1. / 255,
         rotation_range=0.2,
         width_shift_range=0.1,
@@ -75,7 +73,7 @@ def create_data_generator():
         zoom_range=0.2,
         horizontal_flip=True,
         fill_mode='nearest'
-    ))
+    )
 
 
 # Function to preprocess data
@@ -83,19 +81,9 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
     df = pd.read_csv('../data/UTKFace_labels_for_trying.csv')
     train_data, val_data = split_data(df)
 
-    datagen, augmented_datagen = create_data_generator()
+    datagen, = create_data_generator()
 
     train_gen = datagen.flow_from_dataframe(
-        dataframe=train_data,
-        directory=data_path,
-        x_col='Image_ID',
-        y_col=['Age', 'Gender', 'Race'],
-        target_size=image_size,
-        batch_size=batch_size,
-        class_mode='raw',
-    )
-
-    train_gen_augmented = augmented_datagen.flow_from_dataframe(
         dataframe=train_data,
         directory=data_path,
         x_col='Image_ID',
@@ -153,4 +141,4 @@ if not os.path.exists(output_path):
 image_size = (128, 128)
 batch_size = 32
 
-train_generator, train_aug = preprocess_data(data_path, output_path, image_size, batch_size)
+train_generator, val_generator = preprocess_data(data_path, output_path, image_size, batch_size)
