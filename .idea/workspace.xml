@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77400314-07a9-4c2e-97c2-77321798642a" name="Changes" comment="fixed age/ace boxplots" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2YTxgM9xGUPoIfFFXVrm7LyWItl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/University/AI BSc/Year 3/Machine Learning Practical/GitHub/Multi-task-Learning-ML-Practical/project/Images/race_age_boxplot.png&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;IgnoreLang&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\University\AI BSc\Year 3\Machine Learning Practical\GitHub\Multi-task-Learning-ML-Practical\data" />
+      <recent name="D:\Documents\University\AI BSc\Year 3\Machine Learning Practical\GitHub\Multi-task-Learning-ML-Practical\data\UTKFace" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77400314-07a9-4c2e-97c2-77321798642a" name="Changes" comment="" />
+      <created>1700563482429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700563482429</updated>
+      <workItem from="1700563486151" duration="8353000" />
+      <workItem from="1700746037250" duration="2344000" />
+      <workItem from="1700748929308" duration="17232000" />
+      <workItem from="1700856716424" duration="663000" />
+      <workItem from="1701343929607" duration="592000" />
+      <workItem from="1701773765503" duration="1857000" />
+      <workItem from="1701776266028" duration="4278000" />
+      <workItem from="1701955304707" duration="308000" />
+    </task>
+    <task id="LOCAL-00001" summary="intial commit">
+      <created>1700564019966</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700564019966</updated>
+    </task>
+    <task id="LOCAL-00002" summary="intial commit">
+      <created>1700564198510</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700564198510</updated>
+    </task>
+    <task id="LOCAL-00003" summary="intial commit">
+      <created>1700567188028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700567188028</updated>
+    </task>
+    <task id="LOCAL-00004" summary="removed .jpg.chip">
+      <created>1700571566349</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700571566349</updated>
+    </task>
+    <task id="LOCAL-00005" summary="data exploration and plots">
+      <created>1700753384702</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700753384702</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tsne implemented and plots">
+      <created>1700776204437</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700776204437</updated>
+    </task>
+    <task id="LOCAL-00007" summary="plots">
+      <created>1700776212714</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700776212714</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixed age/ace boxplots">
+      <created>1700780032894</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700780032894</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="intial commit" />
+    <MESSAGE value="removed .jpg.chip" />
+    <MESSAGE value="data exploration and plots" />
+    <MESSAGE value="tsne implemented and plots" />
+    <MESSAGE value="plots" />
+    <MESSAGE value="fixed age/ace boxplots" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed age/ace boxplots" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Multi_task_Learning_ML_Practical$Data_Label_Extraction.coverage" NAME="Data_Label_Extraction Coverage Results" MODIFIED="1701780473555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
+  </component>
+</project>
