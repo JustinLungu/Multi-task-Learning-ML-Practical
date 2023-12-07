@@ -44,7 +44,7 @@ def get_image_info(folder_path):
         if filename.endswith(".jpg"):  # Consider only JPG files
             if can_extract_info(filename):
                 age, gender, race = extract_info_from_filename(filename)
-                image_id = os.path.splitext(filename)[0]  # Remove file extension to get image ID
+                image_id = filename  # Remove file extension to get image ID
                 image_info.append((image_id, age, gender, race))
 
     return image_info
@@ -64,7 +64,9 @@ def split_data(data, test_size=0.1, random_state=42):
 
 # Function to create ImageDataGenerator with specified augmentations
 def create_data_generator():
-    return ImageDataGenerator(
+    return (ImageDataGenerator(
+        rescale=1. / 255,),
+            ImageDataGenerator(
         rescale=1. / 255,
         rotation_range=0.2,
         width_shift_range=0.1,
@@ -73,7 +75,7 @@ def create_data_generator():
         zoom_range=0.2,
         horizontal_flip=True,
         fill_mode='nearest'
-    )
+    ))
 
 
 # Function to preprocess data
@@ -81,7 +83,7 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
     df = pd.read_csv('../data/UTKFace_labels_for_trying.csv')
     train_data, val_data = split_data(df)
 
-    datagen = create_data_generator()
+    datagen, augmented_datagen = create_data_generator()
 
     train_gen = datagen.flow_from_dataframe(
         dataframe=train_data,
@@ -90,7 +92,17 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
         y_col=['Age', 'Gender', 'Race'],
         target_size=image_size,
         batch_size=batch_size,
-        class_mode='other',
+        class_mode='raw',
+    )
+
+    train_gen_augmented = augmented_datagen.flow_from_dataframe(
+        dataframe=train_data,
+        directory=data_path,
+        x_col='Image_ID',
+        y_col=['Age', 'Gender', 'Race'],
+        target_size=image_size,
+        batch_size=batch_size,
+        class_mode='raw',
         save_to_dir=output_path,
         save_prefix='aug',
         save_format='jpg'
@@ -103,13 +115,13 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
         y_col=['Age', 'Gender', 'Race'],
         target_size=image_size,
         batch_size=batch_size,
-        class_mode='other',
+        class_mode='raw',
         save_to_dir=output_path,
         save_prefix='aug',
         save_format='jpg'
     )
 
-    return train_gen, val_gen
+    return train_gen, train_gen_augmented
 
 
 folder_path = '../data/for_trying'
@@ -141,4 +153,4 @@ if not os.path.exists(output_path):
 image_size = (128, 128)
 batch_size = 32
 
-train_generator, val_generator = preprocess_data(data_path, output_path, image_size, batch_size)
+train_generator, train_aug = preprocess_data(data_path, output_path, image_size, batch_size)
