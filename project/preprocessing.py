@@ -81,7 +81,7 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
     df = pd.read_csv('../data/UTKFace_labels_for_trying.csv')
     train_data, val_data = split_data(df)
 
-    datagen, = create_data_generator()
+    datagen = create_data_generator()
 
     train_gen = datagen.flow_from_dataframe(
         dataframe=train_data,
@@ -109,7 +109,7 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
         save_format='jpg'
     )
 
-    return train_gen, train_gen_augmented
+    return train_gen, val_gen
 
 
 folder_path = '../data/for_trying'
