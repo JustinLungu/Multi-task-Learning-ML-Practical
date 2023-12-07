@@ -87,7 +87,7 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
         dataframe=train_data,
         directory=data_path,
         x_col='Image_ID',
-        y_col=['Age', 'Gender', 'Race'],
+        y_col=['Age', 'Gender'],
         target_size=image_size,
         batch_size=batch_size,
         class_mode='raw',
@@ -100,7 +100,7 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
         dataframe=val_data,
         directory=data_path,
         x_col='Image_ID',
-        y_col=['Age', 'Gender', 'Race'],
+        y_col=['Age', 'Gender'],
         target_size=image_size,
         batch_size=batch_size,
         class_mode='raw',
@@ -111,34 +111,34 @@ def preprocess_data(data_path, output_path, image_size=(128, 128), batch_size=32
 
     return train_gen, val_gen
 
+def preprocess():
+    folder_path = '../data/for_trying'
+    rename_files(folder_path)
 
-folder_path = '../data/for_trying'
+    # Define the directory to save the DataFrame
+    output_directory = '../data/'
 
-rename_files(folder_path)
+    # Create the directory if it doesn't exist
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
 
-# Define the directory to save the DataFrame
-output_directory = '../data/'
+    # Define the output file path
+    output_file_path = os.path.join(output_directory, 'UTKFace_labels_for_trying.csv')
 
-# Create the directory if it doesn't exist
-if not os.path.exists(output_directory):
-    os.makedirs(output_directory)
+    # Save the DataFrame to a CSV file in the new directory
+    image_dataframe = create_dataframe(folder_path)
+    image_dataframe.to_csv(output_file_path, index=False)
 
-# Define the output file path
-output_file_path = os.path.join(output_directory, 'UTKFace_labels_for_trying.csv')
+    # Example usage
+    data_path = "../data/for_trying"
+    output_path = "../data/augmented_data"
 
-# Save the DataFrame to a CSV file in the new directory
-image_dataframe = create_dataframe(folder_path)
-image_dataframe.to_csv(output_file_path, index=False)
+    # Create the directory if it doesn't exist
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
 
-# Example usage
-data_path = "../data/for_trying"
-output_path = "../data/augmented_data"
+    image_size = (128, 128)
+    batch_size = 32
 
-# Create the directory if it doesn't exist
-if not os.path.exists(output_path):
-    os.makedirs(output_path)
-
-image_size = (128, 128)
-batch_size = 32
-
-train_generator, val_generator = preprocess_data(data_path, output_path, image_size, batch_size)
+    train_generator, val_generator = preprocess_data(data_path, output_path, image_size, batch_size)
+    return train_generator, val_generator
